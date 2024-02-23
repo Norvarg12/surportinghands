@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Event</title>
+  <link rel="icon" href="img/websiteLogo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merriweather:wght@300;400;700&family=Noto+Sans:wght@800&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+ <!-- GOOGLE FONT -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ 
+
+  <style>
+
+    body{
+      background-image: url('img/image-1.jpg') !important; 
+  background-size: contain;
+  filter: brightness(90%) !important;
+    }
+    .wrapper {
+    background-color: #fff;
+    width: 700px;
+    padding: 25px;
+    margin: 25px auto 0;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.wrapper h1 {
+    background-color: #fcfcfc;
+    color: #05b1a3;
+    font-size: 30px;
+    padding: 10px;
+    margin-bottom: 8px;
+    text-align: center;
+    border: 1px dashed #05b1a3;
+}
+
+.wrapper h4 {
+    padding-bottom: 5px;
+    color: #05b1a3;
+}
+
+.input_group {
+    margin-bottom: 8px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0;
+}
+
+.input_box {
+    width: 100%;
+    margin-right: 12px;
+    position: relative;
+}
+
+.input_box:last-child {
+    margin-right: 0;
+}
+
+.input_box .name {
+    padding: 14px 10px 14px 50px;
+    width: 100%;
+    background-color: #fcfcfc;
+    border: 1px solid #0003;
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 3px;
+    color: #333;
+}
+
+.input_box .name:focus, .dob:focus {
+    -webkit-box-shadow: 0 0 2px 1px #05b1a3;
+    -moz-box-shadow: 0 0 2px 1px #05b1a3;
+    box-shadow: 0 0 2px 1px #05b1a3;
+    border: 1px solid #05b1a3;
+}
+
+.input_box .icon {
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    color: #333;
+    background-color: #f1f1f1;
+    border-radius: 2px 0 0 2px;
+    transition: 0.3s;
+    font-size: 20px;
+    pointer-events: none;
+    border: 1px solid #00000003;
+    border-right: none;
+}
+
+.name:focus+.icon {
+    background-color: #05b1a3;
+    color: #fff;
+    border-right: 1px solid #05b1a3;
+    border: none;
+    transition: 1s;
+}
+
+.dob {
+    width: 30%;
+    padding: 14px;
+    text-align: center;
+    background-color: #fcfcfc;
+    transition: 0.3s;
+    outline: none;
+    border: 1px solid #c0bfbf;
+    border-radius: 3px;
+}
+
+.radio {
+    display: none;
+}
+
+.input_box label {
+    width: 50%;
+    padding: 13px;
+    background-color: #fcfcfc;
+    display: inline-block;
+  
+    text-align: center;
+    border: 1px solid #c0bfbf;
+}
+
+.input_box label:first-of-type {
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-right: none;
+}
+
+.input_box label:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.radio:checked+label {
+    background-color: #05b1a3;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.input_box button {
+    width: 100%;
+    background-color: #05b1a3;
+    border: none;
+    color: #fff;
+    padding: 15px;
+    border-right: 4px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.input_box button:hover {
+    cursor: pointer;
+    background-color: #05b1a3;
+}
+        
+  </style>
+</head>
+<body>
+     <!-- firstNav -->
+ <div class="firstnav">
+    <div class="contact-info mb-3">
+      <p class="number1"> <i class="fa-solid fa-map-pin"></i> Akershusstranda 20, 0150 Oslo, Norway</p>
+      <p> <i class="fa-regular fa-envelope"></i> info@company.com</p>
+  
+      <div class="icon  d-none d-md-block" >
+        
+  <a href="//web.whatsapp.com">  <i class="fa-brands fa-whatsapp p-1"></i></a>
+  
+    <a href="https://twitter.com/"> <i class="fa-brands fa-twitter p-1"></i></a>
+  
+    <a href="https://web.facebook.com/?_rdc=1&_rdr"> <i class="fa-brands fa-facebook p-1"></i></a>
+       
+    <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube p-1"></i></a>
+        
+    <a href="https://www.instagram.com/?hl=en"> <i class="fa-brands fa-instagram p-1"></i></a>
+        
+        </div>
+    </div>
+   </div>
+   <!-- firstNav -->
+   
+   <!-- mainNavbar -->
+   <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #ffff; z-index: 1000;">
+    <div class="container">
+      
+      <a class="navbar-brand" href="#">
+        <div class="d-flex align-items-center">
+          <img src="img/logo.png" alt="Kind Heart Charity Logo" width="90" height="80" class="d-inline-block align-bottom me-2">
+          <div class="ppp">
+            <p class="mb-0 txt-1">Supporting Hands</p>
+           <small class="mb-0 smallie">A Charity for the Needy</small>
+          </div>
+        </div>
+      </a>
+      <br>
+      
+      <button id="navbarToggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <i id="toggleIcon" class="fa-solid fa-bars-staggered"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item">
+            <a class="nav-link  nav-1" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  nav-2" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-3 " href="#causes">Causes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  nav-4" href="#volunteer">Volunteer</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-5 dropdown-toggle" href="#news" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              News
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">News Listing</a></li>
+              <li><a class="dropdown-item" href="#">News Detail</a></li>
+              
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  nav-6" href="#contact">Contact</a>
+          </li>
+          <button type="button" class="btn btn-outline-success rounded-pill nav-7">Donate</button>
+  
+        </ul>
+      </div>
+    </div>
+  </nav>
+   <!-- mainNavbar -->
+
+   
+   <div id="payment-form "> 
+    <div class="wrapper ">
+      <h1>Supporting hands</h1>
+      <form action="" method="post">
+          <!--Account Information Start-->
+          <h4>Account</h4>
+          <div class="input_group">
+              <div class="input_box">
+                  <input type="text" placeholder="Full Name" required class="name">
+                  <i class="fa fa-user icon"></i>
+              </div>
+              <div class="input_box">
+                  <input type="text" placeholder="Name on Card" required class="name">
+                  <i class="fa fa-user icon"></i>
+              </div>
+          </div>
+          <div class="input_group">
+              <div class="input_box">
+                  <input type="email" placeholder="Email Address" required class="name">
+                  <i class="fa fa-envelope icon"></i>
+              </div>
+          </div>
+          <div class="input_group">
+              <div class="input_box">
+                  <input type="text" placeholder="Address" required class="name">
+                  <i class="fa fa-map-marker icon" aria-hidden="true"></i>
+              </div>
+          </div>
+          <div class="input_group">
+              <div class="input_box">
+                  <input type="text" placeholder="City" required class="name">
+                  <i class="fa fa-institution icon"></i>
+              </div>
+          </div>
+          <!--Account Information End-->
+
+
+          <!--DOB & Gender Start-->
+          <div class="input_group">
+              <div class="input_box">
+                  <h4>Date Of Birth</h4>
+                  <input type="text" placeholder="DD" required class="dob">
+                  <input type="text" placeholder="MM" required class="dob">
+                  <input type="text" placeholder="YYYY" required class="dob">
+              </div>
+              <div class="input_box">
+                  <h4>Gender</h4>
+                  <input type="radio" name="gender" class="radio" id="b1" checked>
+                  <label for="b1">Male</label>
+                  <input type="radio" name="gender" class="radio" id="b2">
+                  <label for="b2">Female</label>
+              </div>
+          </div>
+          <!--DOB & Gender End-->
+
+
+          <!--Payment Details Start-->
+          <div class="input_group">
+              <div class="input_box">
+                  <h4>Payment Details</h4>
+                  <input type="radio" name="pay" class="radio" id="bc1" checked>
+                  <label for="bc1"><span>
+                          <i class="fa fa-cc-visa"></i>Credit Card</span></label>
+                  <input type="radio" name="pay" class="radio" id="bc2">
+                  <label for="bc2"><span>
+                          <i class="fa fa-cc-paypal"></i>Paypal</span></label>
+              </div>
+          </div>
+          <div class="input_group">
+              <div class="input_box">
+                  <input type="tel" name="" class="name" placeholder="Card Number 1111-2222-3333-4444" required>
+                  <i class="fa fa-credit-card icon"></i>
+              </div>
+          </div>
+          <div class="input_group">
+              <div class="input_box">
+                  <input type="tel" name="" class="name" placeholder="Card CVC 632" required>
+                  <i class="fa fa-user icon"></i>
+              </div>
+          </div>
+          <div class="input_group">
+              <div class="input_box">
+                  <div class="input_box">
+                      <input type="number" placeholder="Exp Month" required class="name">
+                      <i class="fa fa-calendar icon" aria-hidden="true"></i>
+                  </div>
+              </div>
+              <div class="input_box">
+                  <input type="number" placeholder="Exp Year" required class="name">
+                  <i class="fa fa-calendar-o icon" aria-hidden="true"></i>
+              </div>
+          </div>
+          <div class="input_box">
+              <input type="number" placeholder="Enter Amount" required class="name">
+              <i class="fa fa-money icon" aria-hidden="true"></i>
+          </div>
+          <!--Payment Details End-->
+
+          <div class="input_group">
+              <div class="input_box">
+                  <button type="submit">Donate</button>
+              </div>
+          </div>
+
+      </form>
+  </div>
+
+
+   </div>
+
+
+
+
+
+
+
+
+  
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+   <footer class="text-light mt-5">
+    <div class="py-6  ft-start">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="fw-bold text-uppercase text-heading h mb-3 text-light">Supporting Hands</div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, animi!
+            </p>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a class="text-para" href="https://Youtube.com/" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="text-para" href="https://twitter.com/" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="text-para" href="https://facebook.com/" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="text-para" href="https://instagram.com/" title="instagram"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="text-para" href="https://discord.com/" title="Discord"><i class="fa-brands fa-discord"></i></a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+            <h6 class="text-uppercase text-heading mb-3">Quick Links</h6>
+            <ul class="list-unstyled ">
+              <li><a href="#" class="text-para text-light">Our story</a></li>
+              <li><a href="#" class="text-para text-light">Newsroom</a></li>
+              <li><a href="#" class="text-para text-light">Causes</a></li>
+              <li><a href="#" class="text-para text-light">Become a Volunteer</a></li>
+              <li><a href="#" class="text-para text-light">Paertner with us.</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+            <h6 class="text-uppercase text-heading mb-3">Pages</h6>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-para text-light">Water donation to Africa</a></li>
+              <li><a href="#" class="text-para text-light">Schorlarship</a></li>
+              <li><a href="#" class="text-para text-light">Volunteers</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h6 class="text-uppercase text-heading mb-3">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a href="tel:+15057922430" class="text-para text-light"> <i class="fa-solid fa-phone"> </i> (505) 792-2430</a></li>
+              <li class="mb-3"><a href="mailto:Supportinghands@gmail.com" class="text-para text-light"> <i class="fa-solid fa-inbox"> </i> Supportinghands@gmail.com</a></li>
+              <li class="mb-3"><a href="mailto:Supportinghands@gmail.com" class="text-para text-light"> <i class="fa-solid fa-map-pin"> </i> 8014 Edith Blvd NE, Albuquerque, New York. </a></li>
+              <button type="button" class="btn btn-primary btn-lg t-button">Get Direction</button>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- my copyright section -->
+    <div class="py-4 bg-dark text-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="text-sm mb-md-0">&copy; 2024, Neto Code's  All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- my copyright section -->
+  </footer>
+  <!-- last section -->
+  
+   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/004ccf552c.js" crossorigin="anonymous"></script>
+ 
+</body>
+</html>
